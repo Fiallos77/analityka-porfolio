@@ -1,0 +1,22 @@
+backend:
+  name: github
+  repo: owner/repo
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+locale: "en"
+
+collections:
+  - name: blog
+    label: Blog
+    folder: "src/content/blog"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Publish Date, name: pubDate, widget: datetime }
+      - { label: Draft, name: draft, widget: boolean, default: false, required: false }
+      - { label: Body, name: body, widget: markdown }
