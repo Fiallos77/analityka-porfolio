@@ -6,7 +6,6 @@ export const ui: Translations = {
   // Navbar
   "nav.analysis": { en: "Analysis", es: "Analisis" },
   "nav.contact": { en: "Contact", es: "Contacto" },
-  "nav.blog": { en: "Blog", es: "Blog" },
 
   // Hero
   "hero.title.line1": { en: "Tactical Intelligence", es: "Inteligencia Tactica" },
@@ -101,13 +100,4 @@ export const ui: Translations = {
   "detail.executiveSummary": { en: "Executive Summary", es: "Resumen Ejecutivo" },
   "detail.tacticalConclusion": { en: "Tactical Conclusion", es: "Conclusion Tactica" },
 
-  // Blog
-  "blog.back": { en: "Back to Home", es: "Volver al Inicio" },
-  "blog.title.prefix": { en: "Blog", es: "Blog" },
-  "blog.description": {
-    en: "Articles and updates from Analityka XG.",
-    es: "Articulos y actualizaciones de Analityka XG.",
-  },
-  "blog.empty": { en: "No posts yet.", es: "Aun no hay entradas." },
-  "blog.backToBlog": { en: "Back to Blog", es: "Volver al Blog" },
 }

@@ -90,13 +90,6 @@ export function Navbar() {
               {ui["nav.analysis"][lang]}
             </Link>
             <Link
-              href="/blog"
-              className="text-sm font-medium tracking-wide text-muted-foreground transition-colors hover:text-primary"
-              onClick={() => setMobileOpen(false)}
-            >
-              {ui["nav.blog"][lang]}
-            </Link>
-            <Link
               href="/contact"
               className="text-sm font-medium tracking-wide text-muted-foreground transition-colors hover:text-primary"
               onClick={() => setMobileOpen(false)}
