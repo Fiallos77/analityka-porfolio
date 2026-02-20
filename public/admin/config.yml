@@ -1,6 +1,38 @@
 backend:
   name: github
-  repo: owner/repo
+  repo: Fiallos77/analityka-porfolio
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+locale: "en"
+
+collections:
+  - name: analysis
+    label: Analysis
+    folder: "content/analysis"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: Slug, name: slug, widget: string }
+      - { label: ID, name: id, widget: string, required: false }
+      - { label: Title (EN), name: title_en, widget: string }
+      - { label: Title (ES), name: title_es, widget: string }
+      - { label: Excerpt (EN), name: excerpt_en, widget: text }
+      - { label: Excerpt (ES), name: excerpt_es, widget: text }
+      - { label: Category, name: category, widget: select, options: ["Players", "Teams", "Matches", "Data"] }
+      - { label: Competition, name: competition, widget: string }
+      - { label: Date, name: date, widget: datetime }
+      - { label: Cover Image, name: coverImage, widget: image }
+      - { label: Executive Summary (EN), name: executiveSummary_en, widget: text }
+      - { label: Executive Summary (ES), name: executiveSummary_es, widget: text }
+      - { label: Content (EN), name: content_en, widget: markdown }
+      - { label: Content (ES), name: content_es, widget: markdown }
+
+backend:
+  name: github
+  repo: Fiallos77/analityka-porfolio
   branch: main
 
 media_folder: "public/images"
