@@ -51,12 +51,6 @@ export function Navbar() {
             {ui["nav.analysis"][lang]}
           </Link>
           <Link
-            href="/blog"
-            className="text-[13px] font-medium tracking-wide text-muted-foreground transition-colors hover:text-primary"
-          >
-            {ui["nav.blog"][lang]}
-          </Link>
-          <Link
             href="/contact"
             className="text-[13px] font-medium tracking-wide text-muted-foreground transition-colors hover:text-primary"
           >
