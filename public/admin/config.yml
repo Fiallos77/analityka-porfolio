@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: Fiallos77/analityka-porfolio
+  name: git-gateway
   branch: main
 
 media_folder: "public/images"
