@@ -13,9 +13,8 @@ collections:
     label: Analysis
     folder: "content/analysis"
     create: true
-    slug: "{{slug}}"
+    slug: "{{slugify title_en}}"
     fields:
-      - { label: Slug, name: slug, widget: string }
       - { label: ID, name: id, widget: string, required: false }
       - { label: Title (EN), name: title_en, widget: string }
       - { label: Title (ES), name: title_es, widget: string }
