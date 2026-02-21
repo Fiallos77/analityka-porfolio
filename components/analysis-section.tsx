@@ -7,11 +7,13 @@ import { ArrowRight, Calendar, Trophy } from "lucide-react"
 import { useLang } from "@/lib/language-context"
 import { ui } from "@/lib/translations"
 import {
-  analysisData,
+  analysisData as hardcodedData,
   categoryLabels,
   resolve,
   type AnalysisCategory,
+  type AnalysisPost,
 } from "@/lib/analysis-data"
+import { getAnalysisSlugsFromMarkdown, getAnalysisPostBySlugFromMarkdown } from "@/lib/analysis-md"
 
 const filterKeys: ("All" | AnalysisCategory)[] = [
   "All",
@@ -21,16 +23,16 @@ const filterKeys: ("All" | AnalysisCategory)[] = [
   "Data",
 ]
 
-export function AnalysisSection() {
+export function AnalysisSection({ posts }: { posts: AnalysisPost[] }) {
   const { lang } = useLang()
   const [activeFilter, setActiveFilter] = useState<"All" | AnalysisCategory>(
     "All"
   )
 
   const filteredPosts =
-    activeFilter === "All"
-      ? analysisData.slice(0, 3)
-      : analysisData.filter((p) => p.category === activeFilter).slice(0, 3)
+  activeFilter === "All"
+    ? posts.slice(0, 3)
+    : posts.filter((p) => p.category === activeFilter).slice(0, 3)
 
   return (
     <section id="analysis" className="bg-background py-24">
